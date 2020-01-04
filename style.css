@@ -1,0 +1,267 @@
+body {
+	font-size: 20px;
+	font-family: "Times New Roman";
+	color: #979797;
+	margin: 0;
+	padding: 0;
+}
+.class{
+		width:100%;
+		height:200px;
+		background-color:#f9f8f6;
+}
+a:link {color:#FF0000;text-decoration:none;} 
+a:visited {color:green;} 
+a:hover {color:blue;text-decoration:underline;} 
+a:active {color:green;text-decoration:none;}
+#navbar{
+		position:fixed;
+		width:100%;
+}
+#navbar ul{
+
+		background-color:black;
+		width:100%;	
+		height:50px;
+		line-height:50px;
+		padding:0px;
+		overflow:hidden;
+		margin:0px;
+}
+#navbar ul li{
+		display:inline;
+}
+#navbar ul li a{
+		
+		color:white;
+		font-size:18px;
+		text-decoration:none;
+		text-transform:uppercase;
+		padding:15px 40px;						
+}
+#navbar ul li a:hover{
+		color:green;
+}
+#navbar ul li a:active{
+		color:white;
+}
+#slogan{
+		width:98.5%;
+		padding-left:20px;
+		padding-top:30px;
+}
+#slogan h1{padding-top:35px;}
+#slogan p{
+		margin-top:-30px;
+		color:green;
+		
+}
+#slogan input[type="search"]{
+		float:right;
+		margin-top:-50px;
+		margin-right:150px;
+		background-color:#888;
+		border:1px solid #888;
+		border-radius:3px;
+}
+#slogan input[type="submit"]{
+		float:right;
+		background-color:black;
+		color:white;
+		border:1px solid black;
+		margin-right:97px;
+		margin-top:-50px;
+		border-radius:3px;
+}
+::placeholder {
+		color: white;
+}
+#pr{	
+		width:60%;
+		height:38.5%;
+		float:left;
+}
+#pr img{
+		width:100%;
+		height:100%;
+}
+#right{
+		float:right;
+		width:39.7%;
+		height:38.5%;
+}
+#right h1,#right p{
+		white-space: nowrap;
+		text-align:center;
+		margin-top:20px;
+		line-height:35px;
+}
+#right a>img{
+		width:70%;
+		height:20%;
+		margin-left:17%;
+}
+#e{clear:both;}
+#hg{
+		height:100px;
+		background-color:#888;
+		margin-top:20px;
+		border-radius:5px;
+		overflow:show;
+}
+#cs{ 
+	border: 1px dotted rgba(192, 192, 192, .3);
+	width:150px;
+	height:150px;
+	left:5px;
+	position:absolute;
+	margin-top:-30px;
+}
+#cs img{
+		
+		width:100%;
+		height:100%;
+}
+#cs1{
+		border: 1px dotted rgba(192, 192, 192, .3);
+		width:150px;
+		height:150px;
+		right:5px;
+		position:absolute;
+		margin-top:-30px;
+}
+#cs1 img{
+		width:100%;
+		height:100%;
+}
+
+#hg p{
+	color:green;
+	text-align:center;
+	padding-top:20px;
+}
+#projects{	
+		width:60%;
+		float:left;
+}
+#projects h3{
+		border-bottom:1px solid #888;
+		width:80%
+}
+.pitem{
+		float:left;
+		width:49%;
+		margin:3px;	
+		overflow:hidden;
+}
+.pitem img{
+		float:left;
+		width:64px;
+		height:64px;
+}
+.pitem p,.pitem h4{
+		margin:0px;
+		padding-left:7px;
+		text-align:left;
+		overflow: hidden;
+}
+#sidebar{
+		float:right;
+		width:39.7%;
+}
+#sidebar h3{
+		border-bottom:1px solid #888;
+}
+#sidebar p{
+		margin:0px;
+		text-align:left;
+}
+#sidebar a{
+		float:right;
+}
+#sec{
+		width:100%;
+		height:250px;
+		background-color:rgb(50,50,50);
+		margin-top:10px;
+}
+.a{	
+	width:29%;
+	height:198px;
+	float:left;
+}
+.a h3{
+		color:white;
+		padding-left:10px;
+}
+.a address{
+		padding-left:10px;
+		line-height:20px;
+}
+.a p{
+		text-align:left;
+		padding-left:10px;
+}
+#b{		
+		width:41.5%;
+		height:198px;
+		float:left;
+}
+#b p{	
+		text-align:left;
+		padding-left:100px;
+}
+#b h4{	margin:0px;
+		padding-left:100px;
+		color:green;
+}
+#b h3{
+		color:white;
+		padding-left:100px;
+}
+.a input[type="email"]{
+		background-color:black;
+		opacity:0.7;
+		border-radius:5px;
+		border:1px solid black;
+		width:50%;		
+		height:20px;
+		padding-left:2px;
+		color:white;
+		margin-left:10px;
+}
+.a input[type="submit"]{
+		background-color:black;
+		opacity:0.7;
+		border-radius:5px;
+		border:1px solid black;
+		height:22px;
+		color:white;
+		margin-left:10px;
+}
+.a img{
+		float:left;
+		width:60px;
+		height:60px;
+		margin-top:20px;
+		margin-left:20px;	
+}
+#footer{
+		width:100%;
+		height:50px;
+		background-color:black;
+}
+#footer p{
+		float:left;
+		color:white;
+		margin:0px;
+		text-align:left;
+		padding-top:15px;
+		padding-left:15px;
+}
+.bottom_rotation {	
+	float:right;
+	margin-top:9px;
+	margin-right:15px;
+	transform: rotate(45deg);
+}
