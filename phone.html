@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
 	<script src="JS/phone.js"></script>
+	<script src="js/jquery-3.4.1.min"></script>
 	<script>
 				function ndryshImazhin(){
 				element=document.getElementById("huaweii");
@@ -35,14 +36,21 @@
 			margin:5px auto;
 		}
 	</style>
+	<script>
+		$(document).ready(function(){
+			$('button').click(function(){
+				$("video").toggle();
+			});
+		});
+	</script>
 </head>
 <body>
 	<header class="class">
 		<nav id="navbar">
 			<ul>
-				<li><a href="#">HOME</a></li>
-				<li><a href="#">PHONE</a></li>
-				<li><a href="#">LAPTOP</a></li>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="phone.html">PHONE</a></li>
+				<li><a href="laptops.html">LAPTOP</a></li>
 				<li><a href="#">CONTACT</a></li>
 			</ul>
 		</nav>
@@ -55,6 +63,10 @@
 	</header>
 	<div id="container">
 		<h1>Phones</h1>
+		<button>Show or Hide the video</button><br />
+		<video width="800px" height="500px" controls>
+			<source src="images/tel/vs.mp4" type="video/mp4">
+		</video>
 		<figure>
 			<img src="images/tel/samsung.jpg" id="galaxy" onclick="ndrysho()" alt="samsung s10 +" width="800px" height="600px">
 			<figcaption style="border: 1px solid black; outline: 1px solid blue; outline-offset: 2px;" >
@@ -112,8 +124,17 @@
 		</figure>
 	</div>
 	<footer id="footer">
-		<p>Copyright &copy;2013 All Rights Reserved - Domain Name</p>
-		<p style="float:right;text-align:right;padding-right:15px">Template by CS Template</p>
+		<p>Copyright &copy; Grupi 33 &nbsp; &nbsp; <span id="date"></span> </p>
+			<script>
+				document.getElementById("date").innerHTML = Date();
+			</script>
+			<script>
+			$( "#footer p" ).mouseenter(function() {
+				$( "#footer p" ).fadeOut("fast",function(){
+					$( "#footer p" ).fadeIn("fast")});
+			});
+		</script>
+		<canvas width="32" height="32" style="border:1px solid white;" class="bottom_rotation"></canvas>
 	</footer>
-
 </body>
+</html>
