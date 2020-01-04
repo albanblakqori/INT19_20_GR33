@@ -46,6 +46,19 @@
 			bottom: 15px;
 			z-index: 3;
 			}
+		@keyframes animacioni1 {
+			0% { background-color: white; }
+			25% { background-color: lightgrey; }
+			40% { background-color: white; }
+			50% { background-color: lightgrey; }
+			80% { background-color: white; }
+			100% { background-color: white; }
+		}
+
+		#addpostform {
+			animation-name: animacioni1;
+			animation-duration: 10s;
+		}
 	</style>
 </head>
 <body>
@@ -67,7 +80,7 @@
 	</header>
 	<section>
 		<div>
-			<h1 style="font-size:40px">Best laptop 2020: the best laptops available<br /> today</h1>
+			<h1 id="addpostform" style="font-size:40px">Best laptop 2020: the best laptops available<br /> today</h1>
 			<img src="images/laptopp/lap.jpg" width="100%" alt="laptop">
 			<div id="dd">
 				<span>When it comes to picking the very best laptops of 2020, this is the only guide you need: 
@@ -105,7 +118,7 @@
 				<h2>Simply put, the best laptop in the world</h2>
 				<hr />
 				<table>
-					<tbody>
+					<tbody id="addpostform">
 						<tr>
 							<td class="tt">SPECIFICATIONS</td>
 							<td class="nf"><b>CPU:</b> 1.8GHz Intel Core i7-8550U (quad-core, 8MB cache, up to 4.0GHz)</td>
@@ -155,7 +168,7 @@
 				<h1>2. MICROSOFT SURFACE BOOK 2</h1>
 				<h2>The ultimate Windows 10 hybrid laptop for power users</h2>
 				<hr />
-				<table>
+				<table id="addpostform">
 					<tbody>
 						<tr>
 							<td class="tt">SPECIFICATIONS</td>
@@ -205,7 +218,7 @@
 				<h1>3. APPLE MACBOOK PRO 16-INCH</h1>
 				<h2>The best laptop for Apple MacBook users</h2>
 				<hr />
-				<table>
+				<table id="addpostform">
 					<tbody>
 						<tr>
 							<td class="tt">SPECIFICATIONS</td>
@@ -259,7 +272,7 @@
 				<h1>4. HP ENVY 13</h1>
 				<h2>A fantastic all-round laptop that delivers premium features at a modest price</h2>
 				<hr />
-				<table>
+				<table id="addpostform">
 					<tbody>
 						<tr>
 							<td class="tt">SPECIFICATIONS</td>
