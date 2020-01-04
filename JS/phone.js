@@ -32,3 +32,21 @@ try{
 		change_background();
 	}
 }
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+	var zeri1 = new Audio('/sound/bloop.mp3');
+	var zeri2 = new Audio('sound/bloop.mp3');
+	zeri1.play()
+	zeri2.play()
+}
