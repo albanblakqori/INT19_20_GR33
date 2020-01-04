@@ -5,15 +5,16 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="../style.css">
 	<link rel="stylesheet" href="phonee.css">
+	<script src="../js/jquery-3.4.1.min"></script>
 </head>
 <body>
 	<header class="class">
 		<nav id="navbar">
 			<ul>
-				<li><a href="#">HOME</a></li>
-				<li><a href="#">PHONE</a></li>
-				<li><a href="#">LAPTOP</a></li>
-				<li><a href="#">CONTACT</a></li>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="../phone.html">Phone</a></li>
+				<li><a href="../laptops.html">Laptop</a></li>
+				<li><a href="#">Contact</a></li>
 			</ul>
 		</nav>
 		<aside id="slogan">
@@ -251,8 +252,16 @@
 	</div>
 
 	<footer id="footer">
-		<p>Copyright &copy;2013 All Rights Reserved - Domain Name</p>
-		<p style="float:right;text-align:right;padding-right:15px">Template by CS Template</p>
+		<p>Copyright &copy; Grupi 33 &nbsp; &nbsp; <span style="display:inline" id="date"></span> </p>
+		<script>
+				document.getElementById("date").innerHTML = Date();
+			</script>
+		<script>
+			$( "#footer p" ).mouseenter(function() {
+				$( "#footer p" ).fadeOut("fast",function(){
+					$( "#footer p" ).fadeIn("fast")});
+			});
+		</script>
 	</footer>
 </body>
 </html>
