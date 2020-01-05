@@ -64,11 +64,8 @@ a:active {color:green;text-decoration:none;}
 		border:1px solid #888;
 		border-radius:3px;
 }
-#slogan input[type="button"]{
+#slogan input[type="submit"]{
 		float:right;
-		width: 50px;
-		
-		
 		background-color:black;
 		color:white;
 		border:1px solid black;

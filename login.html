@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Phone</title>
+	<link rel="stylesheet" href="login.css">
+	<script type="text/javascript">
+		function login_validate(){
+			var name = document.getElementById('name').value;
+			var pass = document.getElementById('pass').value;
+			var form = document.getElementById('loginform');
+			if(name == "" || pass == ""){
+				var audio = new Audio("sound/beep.wav" ) ;
+				audio.play();
+				alert('Please fill in all fields.');
+			}else{
+				localStorage.setItem('name', name);
+				localStorage.setItem('password', pass);
+				sessionStorage.removeItem('email');
+				sessionStorage.removeItem('phone');
+				form.submit();
+			}
+		}
+	</script>
+	<style>
+		input[type="text"],input[type="password"]{
+			height:35px;
+			width: 300px;
+			border-radius:10px;
+			border:1px solid gray;
+			padding-left:10px;
+			}
+		input[type="button"]{
+			border-radius:10px;
+			border:1px solid gray;
+			height:35px;
+			width:140px;
+			}
+		input[type="checkbox"]{
+			border-radius:10px;
+			border:1px solid gray;
+			height:20px;
+			width:20px;
+			}
+		input[type="button"]:hover {
+			transform-style: preserve-3d;
+			transition: transform 1s;
+			transform: rotateY(180deg);
+			}
+	</style>	
+</head>
+<body>
+	<div id="ct">
+		<img id="logo" class="21" src="images/logo.png" alt="llogoo">
+			<form method="POST" id="loginform" action="indexin.html" oninput="x.value='Welcome ' + name.value">
+			Username:<br>
+			<input list="users" type="text" pattern="[A-Za-z\s]{1,30}" id="name" name="name" autofocus autocomplete="off"></br>
+			<datalist id="users">
+			  <option value="Milot Plakolli">
+			  <option value="Alban Blak&ccedil;ori">
+			</datalist>
+			Password:</br> <input type="password" name="password" id="pass"></br>
+			<input type="checkbox">Remember me
+			<br>
+			<input id="loginBtn" type="button" class="button" value="Login" onclick="login_validate()" autofocus><br><br>	
+			<output name="x" for="name"></output><br>
+			<a href="index.html">Continue without logging in...</a><br>
+			<a href="signup.html">Sign Up</a>
+		</form>
+	</div>
+</body>
+</html>

@@ -50,3 +50,7 @@ function drop(ev) {
 	zeri1.play()
 	zeri2.play()
 }
+//Redirektimi nese nuk ka variabel te shkruar ne emrin name ne localStorage;
+if(localStorage.getItem('name') === null){
+	window.location.href = 'login.html';
+}

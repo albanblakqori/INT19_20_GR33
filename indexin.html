@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PROJEKTI</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<script src="js/phone.js"></script>
+	<script src="js/jquery-3.4.1.min"></script>
+</head>
+<body>
+	<header class="class">
+		<nav id="navbar">
+			<ul>
+				<li><a href="indexin.html">Home</a></li>
+				<li><a href="phone.html" >Phone</a></li>
+				<li><a href="laptops.html" >Laptop</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="login.html">Logout</a></li>
+			</ul>
+		</nav>
+		<aside id="slogan">
+			<h1>Phones</h1>
+			<p class="cnt">Page for Phone Information</p>
+			<p id="welcome"style="margin:0px">Milot Plakolli</p>
+			<input type="search" placeholder="Enter a Search Term" name="search">
+			<input type="submit">			
+		</aside>		
+	</header>
+	<main>
+		<div id="pr">
+			<img src="images/1.jpg" alt="Iphone">
+		</div>
+		<aside id="right">
+			<h1 style="font-size:36px">App Store</h1>
+			<p style="font-size:20px">Apps can transform the way you do anything  <br />
+			you’re passionate about, whether that’s creating, <br />
+			learning, playing games, or just getting more done.<br />
+			And the App Store is the best place to discover <br />
+			new apps that let you pursue your passions <br />
+			ways you never thought possible. <br />
+			<a href="https://www.apple.com/ios/app-store/" 
+			target="blank">Learn more --></a></p>
+			<br />
+			<a href="https://apps.apple.com/us/developer/apple/id284417353" target="blank">
+				<img src="images/2.png">
+			</a>
+		</aside>
+		<div id="e"></div>
+		<div id="hg">
+			<div id="cs" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<img id="css" draggable="true" ondragstart="drag(event)" src="images/t.png" >
+			</div>
+		<div id="cs1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<p>The best-selling phone last year was the Samsung S10 +, 
+			and here you can find <br />some information about his performances	
+			<a href="telephon/galaxy.html">About Samsung S10 +</a></p>	
+		</div>
+		<section id="projects">
+			<h3>Just Some of The App Futures</h3>
+			<section>
+				<article class="pitem">
+					<img src="images/4.jpg" alt="iphone">
+					<h4 style="color:green">iPhone 11</h4>
+					<p>The iPhone 11 is available in six colors:<br />
+						black,white, red, green, and yellow.<br />
+					The iPhone 11 also features a new  <br />
+					aluminum finish, which Apple says is more durable.
+					There's also Dolby Vision<br /> It's powered by
+					Apple's new A13 Bionic chip.<br /></p>
+				</article>
+				<article class="pitem">
+					<img src="images/5.jpg" alt="Samsung">
+					<h4 style="color:green">Samsung S10 +</h4>
+					<p>Samsung Galaxy S10 is powered by a 1.9GHz octa-core<br />
+					Samsung Exynos 9820 processor.It comes with 8GB of RAM.<br />
+					The Samsung Galaxy S10 runs Android and is powered by<br />
+					a 3400mAh non-removable battery. <br />
+					</p>
+				</article>
+				<article class="pitem">
+					<img src="images/6.jpg" alt="Sony">
+					<h4 style="color:green">Sony Xperia 5</h4>
+					<p>Sony Xperia 5 smartphone was launched on 5th September
+					2019.The phone comes with a 6.10-inch touchscreen 
+					with a resolution of 1080x2520 pixels and an aspect ratio 
+					21:9.Is powered by an octa-core
+					855 processor. The Sony Xperia 5 runs Android Pie and is
+					powered by a 3140mAh battery.<br /></p>
+				</article>
+				<article class="pitem">
+					<img src="images/7.png" alt="Huawei">
+					<h4 style="color:green">Huawei P30 Pro</h4>
+					<p>The Huawei P30 Pro is an impressive piece of kit.
+					It has a gorgeous curved screen, flagship Kirin
+					980 processor, IP68 water and dust resistance, reverse
+					wireless charging, a faster in-display fingerprint 
+					scanner, and more.But let's be honest, the P30 Pro
+					is really all about the camera.<br /></p>
+				</article>
+			</section>
+		</section>
+		<aside id="sidebar">
+			<h3>Take the virtual tour </h3>
+			<iframe  style="width:530px;height:312px;" align="left" src="images/video.mp4"></iframe>
+			<p>Apple iPhone 11 Pro vs Huawei P30 Pro 
+			vs Galaxy S10 Plus | Camera Comparison.</p><br />
+			<a href="https://www.youtube.com/results?search_query=iphone+11+vs+samsung+s10%2B+vs+huawei+p30">continue reading--></a>
+		</aside>
+	</main>
+	<script>
+		var name = localStorage.getItem('name');
+		document.getElementById('welcome').innerHTML = "You have logged in as : " + name;
+	</script>
+	<footer>
+		<div id="e"></div>
+			<section id="sec">
+				<article class="a">
+					<h3>Company Detail Here</h3>
+					<address>
+					Bregu i Diellit, p.n.<br>
+					Prishtinë, Republika e Kosovës<br>
+					10000<br /></br /></br />
+					Tel.:+381(0)38 554 896 ext.102<br />
+					Email:<a href="mailto:info@grupi33.com">phonee@telephone.com</a>		
+					</address>
+				</article>
+				<article id="b">
+					<h3>Latest News & Events</h3>
+					<h4>Phones</h4>
+					<p>iPhone 11 pro max</br>
+					Samsung Galaxy S10 +<br/>
+					Huawei P30 Pro</br>
+					Sony Xperia 5</p>
+				</article>
+				<article class="a">
+					<h3>Stay Up to date</h3>
+					<p><i>Subscribe To Our Newsletter</i></p><form id="email" action="" method="">
+						<input type="email" name="email" id="email" placeholder="Enter your email here">
+						<input type="submit" value="GO"></br>
+					<a href="http://www.faccebook.com" target="blank">
+						<img src="images/f.png" alt="twitter">
+					</a>
+					<a href="http://www.instagram.com" target="blank">
+						<img src="images/i.png" alt="twitter">
+					</a>
+					<a href="http://www.twitter.com" target="blank">
+						<img src="images/tt.png" alt="twitter">
+					</a>
+					<a href="http://www.youtube.com" target="blank">
+						<img src="images/yy.jpg" alt="twitter">
+					</a>			
+				</article>
+			</section>
+		
+		<div id="e"></div>
+		<div id="footer">
+			<p>Copyright &copy; Grupi 33 &nbsp; &nbsp; <span id="date"></span> </p>
+			<script>
+				document.getElementById("date").innerHTML = Date();
+			</script>
+			<canvas width="32" height="32" style="border:1px solid white;" class="bottom_rotation"></canvas>
+			<script>
+			$( "#footer p" ).mouseenter(function() {
+				$( "#footer p" ).fadeOut("fast",function(){
+					$( "#footer p" ).fadeIn("fast")});
+			});
+		</script>
+		</div>
+	</footer>
+</body>
+</html>
