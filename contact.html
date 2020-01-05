@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PROJEKTI</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="mystyle.css">
+	
+	<script src="myscript.js"></script>
+</head>
+<body>
+	<header class="class">
+		<nav id="navbar">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="phone.html">Phone</a></li>
+				<li><a href="laptops.html">Laptop</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<aside id="slogan">
+			<h1>Phones</h1>
+			<p class="cnt">Page for Phone Information</p>
+			<input type="search" placeholder="Enter a Search Term" name="search">
+			<input type="button" value="search"></button>	
+
+		</aside>
+	</header>
+
+	<div class="container">
+		<div id="error"> </div>
+		<form id="myform"   onsubmit="return validateForm()" method="post">
+	  
+		  <div class="row">
+			  <div class="col-25">
+				  <label   for="fname">First Name</label>
+				  
+			  </div>
+			  <div class="col-75">
+				  <input type="text" id="fname" name="firstname" placeholder="Your Name..">
+
+			  </div>
+
+		  </div>
+		  <div class="row">
+		  <div class="col-25">
+			  <label for="lname">Last Name</label>
+		  </div>
+		  <div class="col-75">
+			  <input type="text" id="lname" name="lastname" placeholder ="Your last name..">
+		  </div>
+		  </div>
+
+		  <div class="row">
+			  <div class="col-25">
+				  <label for="email">Email</label>
+			  </div>
+			  <div class="col-75">
+				  <input type="text" id="email" name="email" placeholder="Your Email..">
+			  </div>
+		  </div>
+
+		  <div class= "row">
+			  <div class="col-25">
+				  <label for="number">Number</label>
+			  </div>
+			  <div class="col-75">
+				  <input type="text" id="number" name="number" placeholder="Your Numer..">
+			  </div>
+		  </div>
+
+		  <div class="row">
+			  <div class="col-25">
+				  <label for="country">Country</label>
+
+			  </div>
+			  <div class="col-75">
+				  <select id="country" name="country">
+					  <option value="australia">Australia</option>
+					  <option value="canada">Canada</option>
+					  <option  value="usa"> USA</option>
+				  </select>
+			  </div>
+		  </div>
+		  <div class="row">
+			  <div class="col-25">
+				  <label for="subject">Subject</label>
+
+			  </div>
+			  <div class="col-75">
+				  <textarea id="subject" name="subject" placeholder="Write Something..." style="height:200px"></textarea>
+			  </div>
+		  </div>
+		  <div class="row">
+			  <input type="submit" value="Submit">
+		  </div>
+	 </form>
+	</div> 
+	
+	<footer>
+		<div id="e"></div>
+			
+		
+		<div id="e"></div>
+		<div id="footer">
+			<p>Copyright &copy; Grupi 33 &nbsp; &nbsp; <span id="date"></span> </p>
+			<script>
+				document.getElementById("date").innerHTML = Date();
+			</script>
+			<svg width="32" height="32" class="bottom_rotation">
+			<rect width="32" height="32" fill="white" />
+			</svg>
+			
+		</div>
+	</footer>
+</body>
+</html>
