@@ -1,108 +1,182 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>PROJEKTI</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="mystyle.css">
+	<script src="js/phone.js"></script>
+	<script src="js/jquery-3.4.1.min"></script>
+		<script type="text/javascript">
+		function fill_profile_info(){
+			getLocation();
+			document.getElementById("person_name").value = localStorage.getItem('name');
+			document.getElementById("person_password").value = localStorage.getItem('password');
+			document.getElementById("person_email").value = sessionStorage.getItem('email');
+			document.getElementById("person_phone").value = sessionStorage.getItem('phone');
+			document.getElementById("person_message").value = sessionStorage.getItem('message');
+		}
+		
+		function getLocation() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition, showError);
+			} else {
+				alert("Geolocation is not supported by this browser.");
+			}
+		}
+		
+		
+		function showPosition(position) {
+			var latlon = position.coords.latitude + "," + position.coords.longitude;
+			var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+			+latlon+"&zoom=14&size=400x300&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
+			document.getElementById("map").innerHTML = "<img src='"+img_url+"'>";
+		}
+		
+		function showError(error) {
+			switch(error.code) {
+				case error.PERMISSION_DENIED:
+					alert("User denied the request for Geolocation.");
+					break;
+				case error.POSITION_UNAVAILABLE:
+					alert("Location information is unavailable.");
+					break;
+				case error.TIMEOUT:
+					alert("The request to get user location timed out.");
+					break;
+				case error.UNKNOWN_ERROR:
+					alert("An unknown error occurred.");
+					break;
+			}
+		}
+		
+		function validate_p_form(){
+			var form = document.getElementById('p').value;
+			var name = document.getElementById('person_name').value;
+			var password = document.getElementById('person_password').value;
+			var email = document.getElementById('person_email').value;
+			var phone = document.getElementById('person_phone').value;
+			var phone = document.getElementById('person_message').value;
+			
+			var valid_phone = RegExp(/^0[0-9]{2}-[0-9]{3}-[0-9]{3}\b/).test(phone);
+			console.log(valid_phone);
+			if(valid_phone){
+				localStorage.setItem('name', name);
+				localStorage.setItem('password', password);
+				sessionStorage.setItem('email', email);
+				sessionStorage.setItem('phone', phone);
+				sessionStorage.setItem('message', message);
+				alert('Send successfully.');
+			}else{
+				alert('Wrong phone number format, please use this format ###-###-###');
+			}
+		}
+	</script>
+	<style>
+		body{
+			background-color:pink;
+			}
+	input[type="text"],textarea,input[type="password"],input[type="email"],input[type="textfield"]{
+			height:35px;
+			width: 300px;
+			border-radius:10px;
+			border:1px solid gray;
+			padding-left:10px;
+		}
+	textarea{height:100px;}
+	#p input[type="button"]{
+			width: 80px;
+			height: 40px;
+			border-radius:10px;
+			background-color: bluelight;
+			color: blue;
+		}
+	#c{
+		float:right;
+		width:49%;
+		text-align:center;
+	}
+	address{
+		margin-left:10px
+	}
+	address > h1:hover {
+		transform: rotateX(180deg);
+	}
+	#content {
+		border:2px solid black;
+		float:left;
+		width:25%;
+		margin:70px 100px;
+		outline: 2px solid red; 
+		outline-offset: 10px;
+	}
+		#border_img {
+		border: 10px solid transparent;
+		-webkit-border-image: url(images/border.png) 30 stretch;
+		-o-border-image: url(images/border.png) 30 stretch;
+		border-image: url(images/border.png) 30 stretch;
+	}
+	address p a img:hover {
+		transform: rotateY(180deg);
+	}
 	
-	<script src="myscript.js"></script>
+	.e{clear:both;}
+	</style>
 </head>
-<body>
+<body onload="fill_profile_info()">
 	<header class="class">
 		<nav id="navbar">
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="phone.html">Phone</a></li>
-				<li><a href="laptops.html">Laptop</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="indexin.html">Home</a></li>
+				<li><a href="phone.html" >Phone</a></li>
+				<li><a href="laptops.html" >Laptop</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="login.html">Logout</a></li>
 			</ul>
 		</nav>
 		<aside id="slogan">
 			<h1>Phones</h1>
 			<p class="cnt">Page for Phone Information</p>
 			<input type="search" placeholder="Enter a Search Term" name="search">
-			<input type="button" value="search"></button>	
-
-		</aside>
+			<input type="submit">			
+		</aside>		
 	</header>
-
-	<div class="container">
-		<div id="error"> </div>
-		<form id="myform"   onsubmit="return validateForm()" method="post">
-	  
-		  <div class="row">
-			  <div class="col-25">
-				  <label   for="fname">First Name</label>
-				  
-			  </div>
-			  <div class="col-75">
-				  <input type="text" id="fname" name="firstname" placeholder="Your Name..">
-
-			  </div>
-
-		  </div>
-		  <div class="row">
-		  <div class="col-25">
-			  <label for="lname">Last Name</label>
-		  </div>
-		  <div class="col-75">
-			  <input type="text" id="lname" name="lastname" placeholder ="Your last name..">
-		  </div>
-		  </div>
-
-		  <div class="row">
-			  <div class="col-25">
-				  <label for="email">Email</label>
-			  </div>
-			  <div class="col-75">
-				  <input type="text" id="email" name="email" placeholder="Your Email..">
-			  </div>
-		  </div>
-
-		  <div class= "row">
-			  <div class="col-25">
-				  <label for="number">Number</label>
-			  </div>
-			  <div class="col-75">
-				  <input type="text" id="number" name="number" placeholder="Your Numer..">
-			  </div>
-		  </div>
-
-		  <div class="row">
-			  <div class="col-25">
-				  <label for="country">Country</label>
-
-			  </div>
-			  <div class="col-75">
-				  <select id="country" name="country">
-					  <option value="australia">Australia</option>
-					  <option value="canada">Canada</option>
-					  <option  value="usa"> USA</option>
-				  </select>
-			  </div>
-		  </div>
-		  <div class="row">
-			  <div class="col-25">
-				  <label for="subject">Subject</label>
-
-			  </div>
-			  <div class="col-75">
-				  <textarea id="subject" name="subject" placeholder="Write Something..." style="height:200px"></textarea>
-			  </div>
-		  </div>
-		  <div class="row">
-			  <input type="submit" value="Submit">
-		  </div>
-	 </form>
-	</div> 
-	
-	<footer>
-		<div id="e"></div>
-			
+		<div id="content">
+			<address >
+				<h1 id="border_img"><font face="verdana" size="6" color="black">Contact</font></h1>
+				
+				<p>Bregu i Diellit, p.n.</p>
+				<p>10000 Prishtin&euml;, Republika e Kosov&euml;s</p>
+				<br/>
+				<p><b>Tel.:</b> <i>+381(0)38 554 896 ext.102</i></p>
+				<p><strong>Fax:</strong> <i>+381(0)38 542 525</i></p>
+				<p><strong>E-mail:</strong> <u><a href="mailto:info@grupi33.com">phonee@telephone.com</a></u></p>
+				<p>
+					<a href="http://fb.com" target="_blank"><img height="40px" width="40px" src="images/facebook.png" alt="facebook" /></a>
+					<a href="http://twitter.com" target="_blank"><img height="40px" width="40px" src="images/twitter.png" alt="twitter" /></a>
+					<a href="http://plus.google.com" target="_blank"><img height="40px" width="40px" src="images/google_plus.png" alt="google plus" /></a>
+				</p>
+			</address>
+		</div>
+			<div id="c">
+				<h1>Contact Us</h1>
+				<form id="p">
+					<label for="person_name">Name: </label><br>
+					<input type="text" id="person_name" name="person_name"><br>
+					<label for="person_password">Password: </label><br>
+					<input type="password" id="person_password" name="person_password"><br>
+					<label for="person_email">Email: </label><br>
+					<input type="email" id="person_email" name="person_email"><br>
+					<label for="person_phone">Phone: </label><br>
+					<input type="textfield" id="person_phone" name="person_phone"><br>
+					<label for="person_message">Message: </label><br>
+					<textarea id="person_message" name="person_message"></textarea><br>
+					<input type="button" onclick="validate_p_form()" value="Send">
+					<div id="map" style="height:300px;"></div>
+				</form>
+				<br>
+			</div>
+			<p class="e"></p>
 		
-		<div id="e"></div>
-		<div id="footer">
+	<footer id="footer">
 			<p>Copyright &copy; Grupi 33 &nbsp; &nbsp; <span id="date"></span> </p>
 			<script>
 				document.getElementById("date").innerHTML = Date();
@@ -110,7 +184,12 @@
 			<svg width="32" height="32" class="bottom_rotation">
 			<rect width="32" height="32" fill="white" />
 			</svg>
-			
+			<script>
+			$( "#footer p" ).mouseenter(function() {
+				$( "#footer p" ).fadeOut("fast",function(){
+					$( "#footer p" ).fadeIn("fast")});
+			});
+		</script>
 		</div>
 	</footer>
 </body>
