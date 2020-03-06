@@ -17,6 +17,7 @@ a:active {color:green;text-decoration:none;}
 #navbar{
 		position:fixed;
 		width:100%;
+		z-index:+1;
 }
 #navbar ul{
 
